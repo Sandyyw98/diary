@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  br
+  hr
+  form(action="home")
+    .form-group.row
+      label.col-sm-2.col-form-label(for="inputEmail3") Email
+      .col-sm-6
+        input#inputEmail3.form-control(type="email" placeholder="Email")
+    .form-group.row
+      label.col-sm-2.col-form-label(for="inputUserName") User Name
+      .col-sm-6
+        input#inputEmail3.form-control(type="username" placeholder="User Name")
+    .form-group.row
+      label.col-sm-2.col-form-label(for="inputPassword3") Password
+      .col-sm-6
+        input#inputPassword3.form-control(type="password" placeholder="Password")
+    .form-group.row
+      label.col-sm-2.col-form-label(for="inputPassword3") Confirm Password
+      .col-sm-6
+        input#inputPassword3.form-control(type="password" placeholder="Confirm Password")
+    fieldset.form-group
+      .row
+        legend.col-form-label.col-sm-2.pt-0 Gender
+        .col-sm-6
+          .form-check
+            input#gridRadios1.form-check-input(type="radio" name="gridRadios" value="Male" checked="")
+            label.form-check-label(for="gridRadios1")
+              | Male
+          .form-check
+            input#gridRadios2.form-check-input(type="radio" name="gridRadios" value="Female")
+            label.form-check-label(for="gridRadios2")
+              | Female
+          .form-check.disabled
+            input#gridRadios3.form-check-input(type="radio" name="gridRadios" value="Other" disabled="")
+            label.form-check-label(for="gridRadios3")
+              | Other
+    .form-group.row
+      label.col-sm-2.col-form-label(for="exampleFormControlSelect1") Country
+      .col-sm-6
+        select.form-control
+             option US
+             option UK
+             option China
+             option France
+             option Japan
+    .form-group.row
+      .col-sm-10
+        button.btn.btn-secondary(type="submit") Save

@@ -1,0 +1,38 @@
+extends layout
+
+block content
+  .container
+    .row
+      .blue.col-sm-4
+        br
+        br
+        br
+        .card(style="width: 20rem;")
+          img.card-img-top(src="/images/card1.jpg" alt="Card image cap")
+          .card-body
+            h5.card-title About you
+            p.card-text
+              | some self-introduction from user
+          ul.list-group.list-group-flush
+            li.list-group-item Age:
+            li.list-group-item Gender:
+            li.list-group-item Country:
+          .card-body
+            a.btn.btn-outline-secondary.btn-sm(href="/account" role="button") Edit Profile
+      .red.col-sm-8
+        br
+        br
+        br
+        .card(style="width: 50rem;")
+          .card-header
+            .row
+              .col
+                | My Diary
+              .col
+                form.form-inline.my-1.my-sm-0
+                  input.form-control.mr-sm-3(type="search" placeholder="Search" aria-label="Search")
+                  button.btn.btn-outline-secondary.btn-sm(type="submit") Search
+          ul.list-group.list-group-flush
+            li.list-group-item 1
+                  
+                

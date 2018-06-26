@@ -1,0 +1,27 @@
+extends layoutMP
+
+block content
+  body(background="/images/mpbackground2.jpg")
+    .jumbotron
+      h1.display-4.align-middle Little World!!
+      hr
+      p.lead
+        | Welcome to your little world
+        br
+        br
+
+        | In your little world, you could store your secret mood
+        br
+        br
+        | Share your story with someone else
+        br
+        br
+        | And explore others world....
+      hr.my-4
+      p.lead
+        | Start your new journey right now
+      .row
+        .col-sm-6.text-right
+          a.btn.btn-outline-secondary.btn-lg(href="signup" role="button") Sign Up
+        .col-sm-6.text-left
+          a.btn.btn-outline-secondary.btn-lg(href="login" role="button") Log In

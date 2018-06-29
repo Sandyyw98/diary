@@ -20,31 +20,40 @@ block content
       label.col-sm-2.col-form-label(for="inputPassword3") Confirm Password
       .col-sm-6
         input#inputPassword3.form-control(type="password" placeholder="Confirm Password")
-    fieldset.form-group
-      .row
-        legend.col-form-label.col-sm-2.pt-0 Gender
-        .col-sm-6
-          .form-check
-            input#gridRadios1.form-check-input(type="radio" name="gridRadios" value="Male" checked="")
-            label.form-check-label(for="gridRadios1")
-              | Male
-          .form-check
-            input#gridRadios2.form-check-input(type="radio" name="gridRadios" value="Female")
-            label.form-check-label(for="gridRadios2")
-              | Female
-          .form-check.disabled
-            input#gridRadios3.form-check-input(type="radio" name="gridRadios" value="Other" disabled="")
-            label.form-check-label(for="gridRadios3")
-              | Other
-    .form-group.row
-      label.col-sm-2.col-form-label(for="exampleFormControlSelect1") Country
+  hr
+  fieldset.form-group
+    .row
+      legend.col-form-label.col-sm-2.pt-0 Gender
       .col-sm-6
-        select.form-control
-             option US
-             option UK
-             option China
-             option France
-             option Japan
-    .form-group.row
-      .col-sm-10
-        button.btn.btn-secondary(type="submit") Save
+        .form-check
+          input#gridRadios1.form-check-input(type="radio" name="gridRadios" value="Male" checked="")
+          label.form-check-label(for="gridRadios1")
+            | Male
+        .form-check
+          input#gridRadios2.form-check-input(type="radio" name="gridRadios" value="Female")
+          label.form-check-label(for="gridRadios2")
+            | Female
+        .form-check
+          input#gridRadios3.form-check-input(type="radio" name="gridRadios" value="Other")
+          label.form-check-label(for="gridRadios3")
+            | Other
+  .form-group.row
+    label.col-sm-2.col-form-label(for="exampleFormControlSelect1") Country
+    .col-sm-6
+      select.form-control
+           option US
+           option UK
+           option China
+           option France
+           option Japan
+  .form-group.row
+     label.col-sm-2.col-form-label(for="inputBithday") Birthday
+     .col-sm-6
+       input#inputBirthday.form-control(type="date" placeholder="Confirm Password")
+  .form-group.row
+     label.col-sm-2.col-form-label(for="inputLabel") Self-Introduction
+     .col-sm-6
+        textarea(type="introduction" placeholder="Say something about you" rows="5" cols="72")
+  .form-group.row
+    .col-sm-10
+      button.btn.btn-secondary(type="submit") Save

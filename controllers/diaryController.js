@@ -22,6 +22,24 @@ exports.getAllDiary = ( req, res ) => {
     } );
 };
 
+exports.attachDiary = ( req, res, next ) => {
+  console.log('in attachDiary')
+  Diary.find( {} )
+    .exec()
+    .then( ( diary ) => {
+      res.locals.diary = diary
+      console.dir(res.locals)
+      next()
+    } )
+    .catch( ( error ) => {
+      console.log( error.message );
+      return [];
+    } )
+    .then( () => {
+      console.log( 'diary promise complete' );
+    } );
+};
+
 
 
 
@@ -44,7 +62,7 @@ exports.saveDiary = ( req, res ) => {
     } );
 };
 
-/**exports.deleteContent = (req, res) => {
+exports.deleteContent = (req, res) => {
   console.log("in deleteContent")
   let contentName = req.body.deleteContent
   if (typeof(skillContent)=='string') {
@@ -65,4 +83,4 @@ exports.saveDiary = ( req, res ) => {
     res.send(`unknown contentName: ${contentName}`)
   }
 
-};*/
+};

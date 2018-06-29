@@ -46,7 +46,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use('/', mainpageRouter);
-app.use('/home', indexRouter, diaryController.getAllDiary);
+app.use('/home', diaryController.attachDiary, indexRouter);
 app.use('/users', usersRouter);
 app.use('/newdiary', diaryController.getAllDiary);
 app.use('/savediary', diaryController.saveDiary);
